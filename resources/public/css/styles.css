@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.red {
+  color: red;
+}
+
+.quest-item-d4b50 {
+  color: darkblue;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid black;
+  width: 250px;
+  height: 50px;
+  padding: 5px;
+  margin: 0px;
+}
+
+.expand-collapse-btn-411db {
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+}
+
+.subtasks-87a43 {
+  text-indent: 50px;
+}
