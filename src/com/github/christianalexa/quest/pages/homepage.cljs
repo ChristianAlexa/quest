@@ -1,4 +1,7 @@
-(ns com.github.christianalexa.quest.pages.homepage)
+(ns com.github.christianalexa.quest.pages.homepage
+  (:require [com.github.christianalexa.quest.components.quests :refer [Backlog]]))
 
 (defn HomePage []
-  [:h1 "HomePage"])
+  [:div
+   [:h1 "HomePage"]
+   [Backlog]])
