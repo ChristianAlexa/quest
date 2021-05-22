@@ -1,8 +1,7 @@
-(ns quest.events
+(ns com.github.christianalexa.quest.events
   (:require
    [re-frame.core :as re-frame]
-   [quest.db :as db]
-   ))
+   [com.github.christianalexa.quest.db :as db]))
 
 (re-frame/reg-event-db
  ::initialize-db

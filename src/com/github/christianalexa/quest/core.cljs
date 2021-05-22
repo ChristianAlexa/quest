@@ -1,11 +1,10 @@
-(ns quest.core
+(ns com.github.christianalexa.quest.core
   (:require
    [reagent.dom :as rdom]
    [re-frame.core :as re-frame]
-   [quest.events :as events]
-   [quest.views :as views]
-   [quest.config :as config]
-   ))
+   [com.github.christianalexa.quest.events :as events]
+   [com.github.christianalexa.quest.views :as views]
+   [com.github.christianalexa.quest.config :as config]))
 
 
 (defn dev-setup []

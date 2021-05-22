@@ -13,3 +13,9 @@
 
 # shadow-cljs cache, port files
 /.shadow-cljs/
+
+# misc
+TODO.md
+
+# editor
+/.calva
