@@ -1,6 +1,6 @@
 {:nrepl {:port 8777}
 
- 
+
 
  :source-paths ["src" "test"]
 
@@ -20,10 +20,10 @@
    :output-dir "resources/public/js/compiled"
    :asset-path "/js/compiled"
    :modules
-   {:app {:init-fn quest.core/init}}
+   {:app {:init-fn com.github.christianalexa.quest.core/init}}
    :devtools
    {:preloads []}
    :dev
    {:compiler-options
     {:closure-defines
-     { }}}}}}
+     {}}}}}}

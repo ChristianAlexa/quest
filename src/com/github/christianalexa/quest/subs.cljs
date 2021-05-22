@@ -1,4 +1,4 @@
-(ns quest.subs
+(ns com.github.christianalexa.quest.subs
   (:require
    [re-frame.core :as re-frame]))
 
