@@ -1,15 +1,69 @@
 # Quest
 
-## How to run
+Quest is a RP GTD app for users who want to have fun making progress.
 
-First time:
+## Roadmap
 
-- Grant permission to run this build script `$ chmod +x ./build_resources.sh`
-- Run the build script `$ ./build_resources.sh`
+- Quests can be rapidly picked up
+- Quests are easily abandoned
+- Quests can be shared
+- Quests are considered accepted when done conditions and sub tasks are present
+- Quests are grouped by zone
+- Quests can be chained
+- Quests are turned in for rewards
+- Quests have a daily cap
+- Quests have a max backlog
+- Quests are archived on completion
+- Quests can yield achievements
 
-Each time:
+## Tech Stack
 
-- Using VSCode and Calva `ctrl + alt + 0`. Select `app` and `node-repl`.
-- Navigate to <http://localhost:9630/dashboard> for the app dashboard to manage the build status.
-  - Click builds, select app, click force compile. Green is a successful compilation.
-- Navigate to <http://localhost:8280> to view the app.
+**Client:** ClojureScript, Re-frame, Bulma
+
+**Server:** Clojure
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/ChristianAlexa/quest.git
+```
+
+Go to the project directory
+
+```bash
+  cd quest
+```
+
+First time, grant permissions to run build script
+
+```bash
+  chmod +x ./dev/build_resources.sh
+```
+
+Periodically, run the build script
+
+```bash
+  ./dev/build_resources.sh
+```
+
+Start the server in VSCode using Calva
+
+1. With the project open in VSCode, run `ctrl + alt + 0`
+2. select `shadow-cljs`
+3. select `:app`
+4. select `node-repl`
+
+Open build manager to manage app status
+
+1. Navigate to <http://localhost:9630/dashboard>
+2. click builds
+3. select app
+4. click force compile
+
+Navigate to <http://localhost:3000>
+
+## Documentation
+
+This README was built with <https://readme.so/>
