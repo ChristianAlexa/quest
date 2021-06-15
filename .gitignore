@@ -19,3 +19,6 @@ TODO.md
 
 # editor
 /.calva
+/.idea
+
+/.cpcache

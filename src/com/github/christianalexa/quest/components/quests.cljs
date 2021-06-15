@@ -49,7 +49,7 @@
   [quest-key quest-val]
   (let [num-completed (count (filter #(= true (:completed? (second %))) (:subtasks quest-val)))
         num-subtasks (count (:subtasks quest-val))]
-    [:li
+    [:li.draggable-57u49 {:draggable true}
      [:div.level-left
       [:button.button.expand-collapse-btn-411db
        {:on-click #(rf/dispatch [::toggle-expand-collapse quest-key])}
