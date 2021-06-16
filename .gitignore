@@ -16,9 +16,13 @@
 
 # misc
 TODO.md
+**/.DS_Store
 
 # editor
 /.calva
 /.idea
 
 /.cpcache
+
+#env vars
+env-local.sh

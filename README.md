@@ -4,17 +4,17 @@ Quest is a RP GTD app for users who want to have fun making progress.
 
 ## Roadmap
 
-- Quests can be rapidly picked up
-- Quests are easily abandoned
-- Quests can be shared
-- Quests are considered accepted when done conditions and sub tasks are present
-- Quests are grouped by zone
-- Quests can be chained
-- Quests are turned in for rewards
-- Quests have a daily cap
-- Quests have a max backlog
-- Quests are archived on completion
-- Quests can yield achievements
+- [ ] Quests can be rapidly picked up
+- [ ] Quests are easily abandoned
+- [ ] Quests can be shared
+- [ ] Quests are considered accepted when done conditions and sub tasks are present
+- [ ] Quests are grouped by zone
+- [ ] Quests can be chained
+- [ ] Quests are turned in for rewards
+- [ ] Quests have a daily cap
+- [ ] Quests have a max backlog
+- [ ] Quests are archived on completion
+- [ ] Quests can yield achievements
 
 ## Tech Stack
 
@@ -36,33 +36,24 @@ Go to the project directory
   cd quest
 ```
 
-First time, grant permissions to run build script
+Start the server
 
 ```bash
-  chmod +x ./dev/build_resources.sh
+  make start
 ```
 
-Periodically, run the build script
+View the app at <http://localhost:3000>
+Manage the app at <http://localhost:9630/dashboard>
 
-```bash
-  ./dev/build_resources.sh
-```
+Jack into nREPL for VSCode Calva inline form evaluation
 
-Start the server in VSCode using Calva
+1. Click on nREPL (bottom left tray)
+2. Select connect to a running REPL server in your project
+3. Select shadow-cljs
+4. Enter localhost:3333
+5. Select node-repl
 
-1. With the project open in VSCode, run `ctrl + alt + 0`
-2. select `shadow-cljs`
-3. select `:app`
-4. select `node-repl`
-
-Open build manager to manage app status
-
-1. Navigate to <http://localhost:9630/dashboard>
-2. click builds
-3. select app
-4. click force compile
-
-Navigate to <http://localhost:3000>
+You can now evaluate top level forms with `alt+enter` or current forms with `ctrl+enter`.
 
 ## Documentation
 
