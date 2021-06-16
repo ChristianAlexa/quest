@@ -1,6 +1,10 @@
 (ns com.github.christianalexa.quest.components.quests
   (:require [re-frame.core :as rf]))
 
+(def max-allowed-quests
+  "No more than n quests can be accepted at a time."
+  25)
+
 ;; -----------------------------------------------------------------------------
 ;; event handlers
 (rf/reg-event-db
@@ -25,8 +29,30 @@
  (fn [db [_ quest-key subtask-key]]
    (get-in db [:backlog quest-key :subtasks subtask-key :completed?])))
 
+(rf/reg-sub
+ ::num-accepeted-quests
+ (fn [db _]
+   (count (:backlog db))))
+
 ;; ----------------------------------------------------------------------------- 
 ;; views
+
+(defn QuestDetails
+  []
+  [:div.quest-details-9412e
+   [:p "The Kirin Tor of Dalaran"]
+   [:p "Description"]
+   [:p "Rewards"]
+   [:button "Accept"]
+   [:button "Decline"]])
+
+(defn QuestCounter
+  "QuestCounter displays the number of accepted quests versus the allowed maximum."
+  []
+  (let [num-accepted-quests @(rf/subscribe [::num-accepeted-quests])]
+    [:div.quest-counter-text-4581a
+     [:p "Quests: "
+      [:span num-accepted-quests "/" max-allowed-quests]]]))
 
 (defn QuestTextArea
   []
@@ -54,7 +80,7 @@
       [:button.button.expand-collapse-btn-411db
        {:on-click #(rf/dispatch [::toggle-expand-collapse quest-key])}
        (if (:expanded? quest-val) "-" "+")]
-      [:span.quest-item-d4b50 (:quest-name quest-val)]]
+      [:span.quest-item-d4b50.columns.is-vcentered (:quest-name quest-val)]]
      (when (:expanded? quest-val)
        [:div.subtasks-87a43
         [QuestTextArea]
@@ -65,8 +91,11 @@
   "Backlog renders a list of Quests."
   []
   (let [backlog @(rf/subscribe [::backlog])]
-    [:div
-     [:h1 "Quest Backlog"]
+    [:div.backlog-container-2359c
      [:ul (map (fn [[quest-key quest-val]]
                  ^{:key quest-key} [Quest quest-key quest-val])
-               backlog)]]))
+               backlog)
+      ;; TODO - add new quest
+      ;; [:li
+      ;;  [:button.button.expand-collapse-btn-411db  "+"]]
+      ]]))
