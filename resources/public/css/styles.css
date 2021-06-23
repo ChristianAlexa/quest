@@ -88,8 +88,7 @@
 }
 
 .quest-details-9412e {
-  height: 500px;
-  width: 400px;
+  height: 700px;
   border: 3px solid #888580;
   background: #F5C577;
   border-radius: 5px;
@@ -97,4 +96,43 @@
 
 .backlog-container-2359c {
   background: #201E1B;
+}
+
+.backlog-questbook-container-738d2 {
+  vertical-align: top;
+}
+
+.quest-book-button-57c78 {
+  border: 2px solid #888580;
+  width: 100px;
+  font-weight: bold;
+  color: #CDA614;
+  background:#7E0000;
+  border-radius: 5px;
+}
+
+.quest-book-button-57c78:hover {
+  border: 2px solid #888580;
+  font-weight: bold;
+  color: #CDA614;
+  background:#440202;
+  border-radius: 5px;
+}
+
+.quest-book-button-57c78:focus {
+  border: 2px solid #888580;
+  font-weight: bold;
+  color: #CDA614;
+  border-radius: 5px;
+  margin-top: auto;
+}
+
+.item{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between
+}
+
+.columns button{
+  margin-top: auto;
 }

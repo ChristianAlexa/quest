@@ -42,8 +42,8 @@ Start the server
   make start
 ```
 
-View the app at <http://localhost:3000>
-Manage the app at <http://localhost:9630/dashboard>
+- View the app at <http://localhost:3000>
+- Manage the app at <http://localhost:9630/dashboard>
 
 Jack into nREPL for VSCode Calva inline form evaluation
 
