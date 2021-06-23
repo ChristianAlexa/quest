@@ -43,8 +43,9 @@
    [:p "The Kirin Tor of Dalaran"]
    [:p "Description"]
    [:p "Rewards"]
-   [:button "Accept"]
-   [:button "Decline"]])
+   [:div
+    [:button.button.is-small.is-pulled-left.quest-book-button-57c78 {:on-click #(js/console.log "accepted")} "Accept"]
+    [:button.button.is-small.is-pulled-right.quest-book-button-57c78 {:on-click #(js/console.log "declined")} "Decline"]]])
 
 (defn QuestCounter
   "QuestCounter displays the number of accepted quests versus the allowed maximum."
@@ -84,7 +85,7 @@
      (when (:expanded? quest-val)
        [:div.subtasks-87a43
         [QuestTextArea]
-        [:p num-completed " of " num-subtasks " subtasks"]
+        [:p num-completed "/" num-subtasks]
         [SubTasks quest-key quest-val]])]))
 
 (defn Backlog
